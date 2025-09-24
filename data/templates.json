@@ -1,0 +1,9 @@
+{
+  "templates": [
+    { "name": "Startup UI", "image": "assets/template1.jpg" },
+    { "name": "Agency Pro", "image": "assets/template2.jpg" },
+    { "name": "Portfolio Flow", "image": "assets/template3.jpg" },
+    { "name": "Ecommerce Elite", "image": "assets/template4.jpg" },
+    { "name": "Landing Luxe", "image": "assets/template5.jpg" }
+  ]
+}
