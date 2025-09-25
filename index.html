@@ -1,67 +1,147 @@
-<!DOCT<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlowUI Marketplace</title>
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trevia Template Gallery — Tier 2</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary:#3b82f6;
+    --secondary:#10b981;
+    --accent:#f59e0b;
+    --bg:#f9fafb;
+    --text:#111827;
+    --muted:#6b7280;
+    --radius:12px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
+  header{
+    background:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);position:sticky;top:0;z-index:10;
+  }
+  header .logo{font-weight:700;color:var(--primary);font-size:1.5rem;}
+  nav a{margin-left:20px;color:var(--text);font-weight:500;transition:0.3s;}
+  nav a:hover{color:var(--primary);}
+
+  section{padding:60px 20px;}
+  h1,h2{text-align:center;}
+  h1{font-size:2.5rem;color:var(--primary);margin-bottom:20px;}
+  h2{font-size:2rem;color:var(--secondary);margin-bottom:40px;}
+
+  .templates-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    max-width:1200px;margin:0 auto;
+  }
+  .template-card{
+    background:#fff;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    transition:transform 0.3s, box-shadow 0.3s;
+    display:flex;flex-direction:column;justify-content:space-between;
+  }
+  .template-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 35px rgba(0,0,0,0.15);
+  }
+  .template-card img{
+    width:100%;height:180px;object-fit:cover;
+  }
+  .template-card h3{
+    margin:15px 20px 10px;color:var(--primary);
+  }
+  .template-card a{
+    margin:0 20px 20px;
+    padding:10px 0;
+    text-align:center;
+    border-radius:var(--radius);
+    font-weight:600;
+    color:#fff;
+    text-decoration:none;
+    background:var(--primary);
+    transition:all 0.3s;
+    display:block;
+  }
+  .template-card a:hover{background:var(--secondary);transform:scale(1.05);}
+
+  footer{
+    text-align:center;padding:40px 20px;color:var(--muted);font-size:14px;border-top:1px solid #e5e7eb;
+  }
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="logo">FlowUI</div>
-    <nav>
-      <ul>
-        <li><a href="#templates">Templates</a></li>
-        <li><a href="#tiers">Pricing</a></li>
-        <li><a href="#join">Join</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>Next-Level Templates for Visionary Creators</h1>
-    <p>3 tiers of UI. One marketplace. Your edge in design.</p>
-    <button class="cta">Explore Now</button>
-  </section>
+<header>
+  <div class="logo">Trevia</div>
+  <nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- 3D Coverflow -->
-  <section id="coverflow" class="coverflow-section">
-    <h2>Showcase</h2>
-    <div class="coverflow" id="coverflow-container"></div>
-  </section>
+<section id="gallery">
+  <h1>Tier 2 Templates Gallery</h1>
+  <h2>Explore Our Professional Templates</h2>
+  <div class="templates-grid" id="templatesGrid">
+    <!-- Templates will be injected here via JS -->
+  </div>
+</section>
 
-  <!-- Pricing Tiers -->
-  <section id="tiers" class="tiers-section">
-    <h2>Choose Your Edge</h2>
-    <div class="tiers">
-      <div class="tier-card basic">
-        <h3>Starter</h3>
-        <p>Local UI + Graphics</p>
-        <span class="price">$29</span>
-        <button>Get Started</button>
-      </div>
-      <div class="tier-card pro">
-        <h3>Pro</h3>
-        <p>Appealing UI + Better Graphics</p>
-        <span class="price">$79</span>
-        <button>Level Up</button>
-      </div>
-      <div class="tier-card elite">
-        <h3>Elite</h3>
-        <p>Advanced UI/UX + Guerrilla Marketing</p>
-        <span class="price">$149</span>
-        <button>Dominate</button>
-      </div>
-    </div>
-  </section>
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+    <input type="text" placeholder="Name" required style="padding:12px;border-radius:var(--radius);border:1px solid #d1d5db;">
+    <input type="email" placeholder="Email" required style="padding:12px;border-radius:var(--radius);border:1px solid #d1d5db;">
+    <textarea placeholder="Message" required style="padding:12px;border-radius:var(--radius);border:1px solid #d1d5db;"></textarea>
+    <button type="submit" style="padding:14px 28px;border-radius:var(--radius);font-weight:600;background:var(--primary);color:white;border:none;cursor:pointer;transition:all 0.3s;">Send Message</button>
+  </form>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 FlowUI. Designed for growth.</p>
-  </footer>
+<footer>
+  <p>&copy; <span id="year"></span> Trevia — All Rights Reserved</p>
+</footer>
 
-  <script src="js/app.js"></script>
+<script>
+// Dynamic Templates Loader
+const templates = [
+  { "name": "Template 1 - Bay", "image": "https://template-1-bay.vercel.app" },
+  { "name": "Template 2 - Rouge", "image": "https://template-2-rouge.vercel.app" },
+  { "name": "Template 3 - Five Sand", "image": "https://template-3-five-sand.vercel.app" },
+  { "name": "Template 4 - Sage", "image": "https://template-4-sage.vercel.app" },
+  { "name": "Template 5 - Gamma", "image": "https://template-5-gamma.vercel.app" },
+  { "name": "Template 6 - Navy", "image": "https://template-6-navy.vercel.app" },
+  { "name": "Template 7 - Ten", "image": "https://template-7-ten.vercel.app" },
+  { "name": "Template 8 - Indol", "image": "https://template-8-indol.vercel.app" },
+  { "name": "Template 9 - Gilt", "image": "https://template-9-gilt.vercel.app" },
+  { "name": "Template 10 - Gamma", "image": "https://template-10-gamma.vercel.app" },
+  { "name": "Template 11 - Phi", "image": "https://template-11-phi.vercel.app" },
+  { "name": "Template 12 - Ten", "image": "https://template-12-ten.vercel.app" },
+  { "name": "Template 13 - Red", "image": "https://template-13-red.vercel.app" },
+  { "name": "Template 14", "image": "https://template-14.vercel.app" },
+  { "name": "Template 15 - Gamma", "image": "https://template-15-gamma.vercel.app" },
+  { "name": "Template 16 - Puce", "image": "https://template-16-puce.vercel.app" },
+  { "name": "Template 17", "image": "https://template-17.vercel.app" },
+  { "name": "Template 18", "image": "https://template-18.vercel.app" }
+];
+
+const grid = document.getElementById('templatesGrid');
+templates.forEach(t=>{
+  const card = document.createElement('div');
+  card.className = 'template-card';
+  card.innerHTML = `
+    <img src="${t.image}" alt="${t.name}">
+    <h3>${t.name}</h3>
+    <a href="${t.image}" target="_blank">Live Preview</a>
+  `;
+  grid.appendChild(card);
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
-</html>
+    </html>
