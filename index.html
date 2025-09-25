@@ -3,68 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trevia Templates — Tier 2</title>
+<title>Trevia Templates | Tier 2</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #ff6b6b;
-    --accent: #ffb86c;
-    --bg: #f5f5f5;
-    --text: #1f2937;
-    --card-radius: 14px;
-    --shadow: 0 6px 18px rgba(0,0,0,0.12);
+    --primary:#ff6f61;
+    --accent:#ffcc00;
+    --bg:#f5f5f5;
+    --text:#111827;
+    --muted:#6b7280;
+    --radius:12px;
+    --shadow:0 4px 20px rgba(0,0,0,0.1);
   }
 
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
-  header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:#fff;box-shadow:0 5px 15px rgba(0,0,0,0.05);position:sticky;top:0;z-index:10;}
-  .logo{font-weight:700;color:var(--primary);font-size:1.5rem;}
-  nav a{margin-left:20px;color:var(--text);font-weight:500;text-decoration:none;transition:0.3s;}
-  nav a:hover{color:var(--primary);}
+  * {margin:0;padding:0;box-sizing:border-box;}
+  body {font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);}
 
-  /* Hero */
-  .hero{
-    background: linear-gradient(135deg,var(--primary),var(--accent));
-    color:white;padding:120px 20px 60px;text-align:center;clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  header {
+    background:#fff;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:var(--shadow);
+    position:sticky;
+    top:0;
+    z-index:10;
   }
-  .hero h1{font-size:3rem;margin-bottom:15px;}
-  .hero p{font-size:1.2rem;margin-bottom:30px;opacity:0.9;}
-  .btn{padding:12px 28px;border-radius:var(--card-radius);font-weight:600;text-decoration:none;transition:all 0.3s;}
-  .btn-primary{background:white;color:var(--primary);}
-  .btn-primary:hover{background:var(--accent);color:white;transform:scale(1.05);}
+  header .logo {font-weight:700;font-size:1.6rem;color:var(--primary);}
+  nav a {margin-left:20px;color:var(--text);font-weight:500;text-decoration:none;transition:0.3s;}
+  nav a:hover {color:var(--primary);}
 
+  main {padding:60px 20px;}
+  h1{text-align:center;font-size:2.8rem;margin-bottom:40px;color:var(--primary);}
+  
   /* Template Grid */
-  .templates{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;padding:80px 40px;}
-  .template-card{
-    position:relative;
-    border-radius:var(--card-radius);
+  #templatesGrid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .template-card {
+    background:#fff;
+    border-radius:var(--radius);
     overflow:hidden;
     box-shadow:var(--shadow);
+    position:relative;
     cursor:pointer;
-    transition: transform 0.4s;
-    perspective: 1000px;
+    transition:transform 0.3s, box-shadow 0.3s;
   }
-  .template-card img{
-    width:100%;display:block;
-    transition: transform 0.4s, filter 0.4s;
-    border-radius:var(--card-radius);
-  }
-  .template-card:hover img{
-    transform: scale(1.05) rotateY(5deg);
-    filter: brightness(1.1);
-  }
-  .overlay{
+  .template-card:hover {transform:translateY(-6px);box-shadow:0 10px 35px rgba(0,0,0,0.15);}
+  .template-card img {width:100%;height:180px;object-fit:cover;display:block;}
+  
+  /* Overlay with template name */
+  .overlay {
     position:absolute;
-    top:0;left:0;right:0;bottom:0;
-    background:rgba(0,0,0,0.55);
-    color:#fff;display:flex;justify-content:center;align-items:center;
-    font-weight:600;font-size:1rem;opacity:0;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0.6);
+    color:#fff;
+    padding:10px;
+    text-align:center;
+    font-weight:600;
+    opacity:0;
     transition:opacity 0.3s;
   }
-  .template-card:hover .overlay{opacity:1;}
+  .template-card:hover .overlay {opacity:1;}
 
-  footer{text-align:center;padding:40px 20px;color:#6b7280;border-top:1px solid #e5e7eb;}
-  @media(max-width:768px){.hero h1{font-size:2rem;}.hero p{font-size:1rem;}}
+  /* Preview Button */
+  .url-button {
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:var(--accent);
+    color:#111;
+    padding:6px 12px;
+    border-radius:6px;
+    font-weight:600;
+    text-decoration:none;
+    font-size:0.85rem;
+    transition:all 0.3s;
+  }
+  .url-button:hover {transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+
+  footer {
+    text-align:center;
+    padding:40px 20px;
+    font-size:14px;
+    color:var(--muted);
+    border-top:1px solid #e5e7eb;
+    margin-top:60px;
+  }
+
+  @media(max-width:768px){
+    h1{font-size:2rem;}
+  }
 </style>
 </head>
 <body>
@@ -72,55 +107,56 @@
 <header>
   <div class="logo">Trevia</div>
   <nav>
-    <a href="#hero">Home</a>
-    <a href="#templates">Templates</a>
+    <a href="#templatesGrid">Templates</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<section class="hero" id="hero">
-  <h1>Trevia Tier 2 Templates</h1>
-  <p>Explore professional, modern templates — fully responsive and production-ready.</p>
-  <a href="#templates" class="btn btn-primary">Browse Templates</a>
-</section>
-
-<section class="templates" id="templates">
-  <!-- Template cards injected here -->
-</section>
+<main>
+  <h1>Tier 2 Templates Gallery</h1>
+  <div id="templatesGrid">
+    <!-- Dynamically populated from template.json -->
+  </div>
+</main>
 
 <footer>
-  <p>&copy; <span id="year"></span> Trevia Templates</p>
+  &copy; <span id="year"></span> Trevia Templates
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  async function loadTemplates() {
-    try {
-      // Fetch template.json
-      const res = await fetch('./template.json');
-      const data = await res.json();
-
-      const container = document.getElementById('templates');
+  fetch('template.json')
+    .then(res => res.json())
+    .then(data => {
+      const grid = document.getElementById('templatesGrid');
       data.templates.forEach(t => {
         const card = document.createElement('div');
         card.className = 'template-card';
-        card.innerHTML = `
-          <img src="${t.thumbnail}" alt="${t.name}">
-          <div class="overlay">
-            <a href="${t.url}" target="_blank" style="color:white;text-decoration:none;">Live Preview</a>
-          </div>
-        `;
-        container.appendChild(card);
-      });
-    } catch(err) {
-      console.error('Error loading templates:', err);
-      document.getElementById('templates').innerHTML = '<p style="text-align:center;color:red;">Failed to load templates. Make sure template.json is in the same folder.</p>';
-    }
-  }
 
-  loadTemplates();
+        const img = document.createElement('img');
+        // Use WordPress mshots for automatic thumbnail
+        img.src = `https://s.wordpress.com/mshots/v1/${encodeURIComponent(t.url)}?w=600`;
+        img.alt = t.name;
+
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
+        overlay.textContent = t.name;
+
+        const btn = document.createElement('a');
+        btn.href = t.url;
+        btn.target = "_blank";
+        btn.className = 'url-button';
+        btn.textContent = "Preview";
+
+        card.appendChild(img);
+        card.appendChild(overlay);
+        card.appendChild(btn);
+        grid.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Failed to load templates:', err));
 </script>
 
 </body>
-  </html>
+</html>
