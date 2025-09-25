@@ -1,9 +1,22 @@
 {
   "templates": [
-    { "name": "Startup UI", "image": "assets/template1.jpg" },
-    { "name": "Agency Pro", "image": "assets/template2.jpg" },
-    { "name": "Portfolio Flow", "image": "assets/template3.jpg" },
-    { "name": "Ecommerce Elite", "image": "assets/template4.jpg" },
-    { "name": "Landing Luxe", "image": "assets/template5.jpg" }
+    { "name": "Template 1 - Bay", "image": "https://template-1-bay.vercel.app" },
+    { "name": "Template 2 - Rouge", "image": "https://template-2-rouge.vercel.app" },
+    { "name": "Template 3 - Five Sand", "image": "https://template-3-five-sand.vercel.app" },
+    { "name": "Template 4 - Sage", "image": "https://template-4-sage.vercel.app" },
+    { "name": "Template 5 - Gamma", "image": "https://template-5-gamma.vercel.app" },
+    { "name": "Template 6 - Navy", "image": "https://template-6-navy.vercel.app" },
+    { "name": "Template 7 - Ten", "image": "https://template-7-ten.vercel.app" },
+    { "name": "Template 8 - Indol", "image": "https://template-8-indol.vercel.app" },
+    { "name": "Template 9 - Gilt", "image": "https://template-9-gilt.vercel.app" },
+    { "name": "Template 10 - Gamma", "image": "https://template-10-gamma.vercel.app" },
+    { "name": "Template 11 - Phi", "image": "https://template-11-phi.vercel.app" },
+    { "name": "Template 12 - Ten", "image": "https://template-12-ten.vercel.app" },
+    { "name": "Template 13 - Red", "image": "https://template-13-red.vercel.app" },
+    { "name": "Template 14", "image": "https://template-14.vercel.app" },
+    { "name": "Template 15 - Gamma", "image": "https://template-15-gamma.vercel.app" },
+    { "name": "Template 16 - Puce", "image": "https://template-16-puce.vercel.app" },
+    { "name": "Template 17", "image": "https://template-17.vercel.app" },
+    { "name": "Template 18", "image": "https://template-18.vercel.app" }
   ]
 }
