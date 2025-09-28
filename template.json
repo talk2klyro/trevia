@@ -1,0 +1,24 @@
+{
+  "templates": [
+    { "name": "Template 1 - Bay", "url": "https://template-1-bay.vercel.app", "tier": 1, "price": 5000 },
+    { "name": "Template 2 - Rouge", "url": "https://template-2-rouge.vercel.app", "tier": 1, "price": 7000 },
+    { "name": "Template 3 - Five Sand", "url": "https://template-3-five-sand.vercel.app", "tier": 1, "price": 8000 },
+    { "name": "Template 4 - Sage", "url": "https://template-4-sage.vercel.app", "tier": 1, "price": 9000 },
+    { "name": "Template 5 - Gamma", "url": "https://template-5-gamma.vercel.app", "tier": 1, "price": 10000 },
+    { "name": "Template 6 - Navy", "url": "https://template-6-navy.vercel.app", "tier": 1, "price": 12000 },
+    
+    { "name": "Template 7 - Ten", "url": "https://template-7-ten.vercel.app", "tier": 2, "price": 15000 },
+    { "name": "Template 8 - Indol", "url": "https://template-8-indol.vercel.app", "tier": 2, "price": 18000 },
+    { "name": "Template 9 - Gilt", "url": "https://template-9-gilt.vercel.app", "tier": 2, "price": 20000 },
+    { "name": "Template 10 - Gamma", "url": "https://template-10-gamma.vercel.app", "tier": 2, "price": 22000 },
+    { "name": "Template 11 - Phi", "url": "https://template-11-phi.vercel.app", "tier": 2, "price": 23000 },
+    { "name": "Template 12 - Ten", "url": "https://template-12-ten.vercel.app", "tier": 2, "price": 25000 },
+    
+    { "name": "Template 13 - Red", "url": "https://template-13-red.vercel.app", "tier": 3, "price": 40000 },
+    { "name": "Template 14", "url": "https://template-14.vercel.app", "tier": 3, "price": 45000 },
+    { "name": "Template 15 - Gamma", "url": "https://template-15-gamma.vercel.app", "tier": 3, "price": 50000 },
+    { "name": "Template 16 - Puce", "url": "https://template-16-puce.vercel.app", "tier": 3, "price": 52000 },
+    { "name": "Template 17", "url": "https://template-17.vercel.app", "tier": 3, "price": 55000 },
+    { "name": "Template 18", "url": "https://template-18.vercel.app", "tier": 3, "price": 60000 }
+  ]
+}
